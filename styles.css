@@ -1,0 +1,44 @@
+body {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 5fr;
+  margin: 0;
+}
+
+.sidebar {
+  background-color: #1992d4;
+  color: white;
+  padding: 8px;
+  grid-row: 1 / -1;
+  grid-column: 1 / 2;
+}
+
+.topbar {
+  background-color: #ffffff;
+  padding: 16px;
+  grid-row: 1 / 2;
+  grid-column: 2 / -1;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 2fr;
+}
+
+.profile-header {
+  display: flex;
+}
+
+.content {
+  background-color: #e2e8f0;
+  padding: 16px 8px;
+  grid-row: 2 / -1;
+  grid-column: 2 / -1;
+
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.projects {
+  grid-row: 1 / -1;
+}
