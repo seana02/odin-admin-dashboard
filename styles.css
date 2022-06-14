@@ -1,7 +1,7 @@
 body {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 5fr;
+  grid-template-rows: 22vh 9fr;
   margin: 0;
   font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
@@ -92,7 +92,7 @@ svg {
 
 .user-info {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 4fr 5fr;
   grid-template-columns: 1fr 4fr;
   font-weight: bold;
   font-size: 18px;
@@ -101,11 +101,18 @@ svg {
 .user-info svg {
   grid-row: 1 / -1;
   justify-self: center;
+  align-self: center;
 }
 
 .hi-there {
   font-size: 12px;
-  align-self: center;
+  align-self: flex-end;
+}
+
+.username {
+  font-size: 20px;
+  font-weight: bolder;
+  align-self: flex-start;
 }
 
 .buttons {
@@ -124,17 +131,114 @@ svg {
   height: 32px;
 }
 
+.buttons button:hover {
+  background-color: #1681bb;
+}
+
 .content {
   background-color: #e2e8f0;
-  padding: 16px 8px;
+  padding: 24px 16px;
   grid-row: 2 / -1;
   grid-column: 2 / -1;
 
   display: grid;
-  grid-template-columns: 4fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 2fr 3fr;
+  column-gap: 16px;
+  row-gap: 8px;
+}
+
+.content-heading {
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .projects {
   grid-row: 1 / -1;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 16px;
+  row-gap: 16px;
+  padding: 8px;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 24px;
+  border-left-style: solid;
+  border-left-width: 6px;
+  border-left-color: #f0b429;
+  border-radius: 8px;
+
+  display: grid;
+  grid-template-rows: 1fr 5fr;
+  row-gap: 8px;
+}
+
+.title,
+.section-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.card-content,
+.section-text {
+  color: #636363;
+}
+
+.options {
+  justify-self: right;
+}
+
+.announcements-menu {
+  background-color: #ffffff;
+  padding: 32px;
+  margin-top: 8px;
+  border-radius: 8px;
+  display: grid;
+}
+
+.section-text {
+  border-bottom: 2px solid #d2d2d2;
+  padding-bottom: 16px;
+}
+
+.section-title {
+  padding-top: 16px;
+  margin-bottom: 4px;
+}
+
+.section:first-child .section-title {
+  padding-top: 0px;
+}
+
+.section:last-child .section-text {
+  border-bottom: none;
+  padding-bottom: none;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 8px;
+  row-gap: 2px;
+}
+
+.trending-menu {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.profile-picture {
+  grid-row: 1 / -1;
+}
+
+.profile-id {
+  align-self: flex-end;
+  font-weight: bold;
 }
